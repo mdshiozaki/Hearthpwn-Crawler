@@ -41,6 +41,7 @@ class HearthPwnSpider(scrapy.Spider):
 			code = deckcode.css('button::attr(data-clipboard-text)').get()
 			link = response.css('link::attr(href)')[1].get()
 			fullDeck = deckstrings.parse_deckstring(code)
+			print(fullDeck)
 
 			query = "INSERT INTO test1(deckcode,url) " \
 			"VALUES(%s,%s)"
@@ -52,7 +53,15 @@ class HearthPwnSpider(scrapy.Spider):
 
 
 			#get last ID and add 1 to it
+			for i in range(len(fullDeck[0])):
+				card = fullDeck[0][i][0]
+				print(card)
 
-			# for each card in fulldeck:
+				card_query = "INSERT INTO test2(card_number) " \
+				"VALUES(%s)"
+				args = (card)
 
-
+				card_cursor = self.conn.cursor()
+				card_cursor.execute(card_query, (args, ))
+				self.conn.commit()
+				
