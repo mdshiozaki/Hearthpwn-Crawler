@@ -10,6 +10,11 @@ from https://hearthpwn.com, cards most often found in decks with the searched ca
 The scraped data was stored in a MySQL database, which was connected to a web server. The web server housed the API and webcrawler and 
 HTTP calls to the REST API were used as client-server communication.
 
+Activity Diagram: 
+![alt text][adiagram]
+
+[adiagram]: https://github.com/mdshiozaki/Hearthpwn-Crawler/blob/master/activity_diagram_crawler.png "Webcrawler Activity Diagram"
+
 ## Data Scraped
 * Deck code
 * Deck name
@@ -34,6 +39,11 @@ Database:
 * Database: MySQL
 * Security: Amazon Security Groups - Custom Access Settings
 
+
+Subsystem Diagram: 
+![alt text][sdiagram]
+
+[sdiagram]: https://github.com/mdshiozaki/Hearthpwn-Crawler/blob/master/Crawler_subsystem_diagram.png "Webcrawler Subsystem Diagram"
 
 
 
