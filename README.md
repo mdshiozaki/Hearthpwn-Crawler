@@ -41,6 +41,7 @@ Database:
 
 
 Subsystem Diagram: 
+
 ![alt text][sdiagram]
 
 [sdiagram]: https://github.com/mdshiozaki/Hearthpwn-Crawler/blob/master/Crawler_subsystem_diagram.png "Webcrawler Subsystem Diagram"
